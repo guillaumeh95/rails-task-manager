@@ -1,0 +1,15 @@
+<h1>New Task</h1>
+<%= form_for(@task) do |f| %>
+  <div class="form-group">
+    <p><%= f.label :title %></p>
+    <p class="form-control"><%= f.text_field :title %></p>
+  </div>
+  <div class="form-group">
+    <p><%= f.label :details %></p>
+    <p><%= f.text_field :details %></p>
+  </div>
+    <div>
+      <%= f.submit %>
+  </div>
+<% end %>
+<p class="footer"><%= link_to '<i class="fa fa-reply" aria-hidden="true"></i> Back to list'.html_safe, tasks_path %></p>
