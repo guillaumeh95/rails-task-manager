@@ -1,15 +1,15 @@
 <h1>New Task</h1>
 <%= form_for(@task) do |f| %>
   <div class="form-group">
-    <p><%= f.label :title %></p>
-    <p class="form-control"><%= f.text_field :title %></p>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
   <div class="form-group">
-    <p><%= f.label :details %></p>
-    <p><%= f.text_field :details %></p>
+    <%= f.label :details %>
+    <%= f.text_field :details, class: "form-control"  %>
   </div>
     <div>
-      <%= f.submit %>
+      <%= f.submit "Add Task", class: "btn btn-primary"  %>
   </div>
 <% end %>
 <p class="footer"><%= link_to '<i class="fa fa-reply" aria-hidden="true"></i> Back to list'.html_safe, tasks_path %></p>
